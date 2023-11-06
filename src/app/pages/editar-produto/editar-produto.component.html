@@ -1,0 +1,23 @@
+<h1 class="mt-3 mb-3">Editar Produtos</h1>
+<form [formGroup]="produtoForm" (submit)="salvar()">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="id" class="form-label">Id</label>
+          <input type="text" class="form-control" id="id" formControlName="id" >
+          <label for="nome" class="form-label">Nome do Produto</label>
+          <input type="text" class="form-control" id="nome" formControlName="nome" value="{{nome}}">
+          <label for="idade" class="form-label">codigoBarras</label>
+          <input type="number" class="form-control" id="codigoBarras" formControlName="codigoBarras" value="{{codigoBarras}}">
+          <label for="idade" class="form-label">Preço</label>
+          <input type="number" class="form-control" id="preco" formControlName="preco" value="{{preco}}">
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <a class="btn btn-secondary me-1" routerLink="/produtos">Voltar</a>
+    <button class="btn btn-primary" type="submit" >Confirmar</button>
+  </div>
+</form>
